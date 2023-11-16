@@ -14,7 +14,7 @@ int main()
 	
 	for(i = 0; i < 5; i++) {
 		printf("grade[%i] = %i\n", i, *(grade+i));
-		sum+= grade[i];
+		sum+= *(grade+i);
 	}
 	
 	printf("average : %i", sum/5);
