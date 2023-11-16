@@ -1,12 +1,21 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void main(void)
+void swap(int *x, int *y)
 {
-	int i = 4;
+	int temp;
 	
-	int* pi= &i;
-	char* pc= &i;
-	
-	printf("%i, %i, %i\n", i, *pi, *pc);
+	temp = *x;
+	*x = *y;
+	*y = temp;
 }
+
+void main(void) 
+{
+	int a = 3;
+	int b = 5;
+	swap(&a, &b);
+	printf("a : %i, b : %i\n", a, b);
+	
+}
+
